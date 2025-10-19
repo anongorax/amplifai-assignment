@@ -13,9 +13,9 @@ type InsightsProps = {
  * Displays AI-generated insights and recommendations
  */
 export const Insights: React.FC<InsightsProps> = ({ data }) => (
-    <div className="bg-gradient-to-tl from-[#FFF] to-[#f5e6da] p-3 sm:p-4 md:p-6 rounded-lg shadow-sm">
+    <div className="bg-gradient-to-tl from-[#FFF] to-[#f5e6da] p-4 sm:p-5 md:p-6 rounded-lg shadow-sm">
         <div className='flex items-center mb-3 sm:mb-4'>
-            <Sparkles color='#e6ab77' fill='#e6ab77' size={16} />
+            <Sparkles color='#e6ab77' fill='#e6ab77' size={18} />
             <h3 className="text-base sm:text-lg font-semibold text-gray-800 ml-1">Insights</h3>
             <MoveDiagonal size={16} className="text-blue-300 ml-auto" />
         </div>

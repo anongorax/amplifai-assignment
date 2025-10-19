@@ -19,7 +19,7 @@ export default function Dashboard() {
     return (
         <>
             {/* KPI Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-4 md:mb-6">
                 {kpiData.map((kpi) => (
                     <KpiCard
                         key={kpi.title}
@@ -32,7 +32,7 @@ export default function Dashboard() {
             </div>
 
             {/* Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 mb-4 md:mb-6">
                 <div className="lg:col-span-3">
                     <RevenueChart data={revenueProfitData} />
                 </div>
@@ -42,7 +42,7 @@ export default function Dashboard() {
             </div>
 
             {/* Table & Insights */}
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6">
                 <div className="lg:col-span-3">
                     <PerformanceTable data={performanceData} />
                 </div>

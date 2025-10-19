@@ -19,30 +19,31 @@ type RevenueChartProps = {
 };
 
 export const RevenueChart: React.FC<RevenueChartProps> = ({ data }) => (
-    <div className="bg-white p-6 rounded-lg shadow-sm">
+    <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-sm">
         <div className='flex items-center'>
-            <ChartSpline className='text-black mb-4 mx-1' />
-            <h3 className="text-lg font-semibold text-gray-800 mb-4">
+            <ChartSpline className='text-black mb-3 sm:mb-4 mx-1' size={18} />
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 mb-3 sm:mb-4">
                 Revenue & Profit Trend
             </h3>
-            <MoveDiagonal size={18} className="text-blue-300 ml-auto" />
+            <MoveDiagonal size={16} className="text-blue-300 ml-auto" />
         </div>
-        <div style={{ width: '100%', height: 300 }}>
+        <div style={{ width: '100%', height: 250 }} className="sm:h-[300px]">
             <ResponsiveContainer>
-                <p className='text-gray-400 ml-5 mb-1'> {`{€}`} </p>
+                <p className='text-gray-400 ml-3 sm:ml-5 mb-1 text-xs sm:text-sm'> {`{€}`} </p>
                 <LineChart
                     data={data}
-                    margin={{ top: 5, right: 20, left: -20, bottom: 5 }}
+                    margin={{ top: 5, right: 10, left: -25, bottom: 5 }}
                 >
                     <CartesianGrid strokeDasharray="3 3" vertical={false} />
                     <XAxis
                         dataKey="name"
-                        fontSize={12}
+                        fontSize={10}
                         axisLine={true}
                         tickLine={true}
+                        interval="preserveStartEnd"
                     />
                     <YAxis
-                        fontSize={12}
+                        fontSize={10}
                         axisLine={true}
                         tickLine={true}
                         tickFormatter={(value) => `${value}M`}

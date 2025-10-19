@@ -41,10 +41,10 @@ export const AddCompanyModal: React.FC<AddCompanyModalProps> = ({ open, onClose,
     if (!open) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-            <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-2xl">
-                <h2 className="text-xl font-bold mb-4 text-black">Add New Company</h2>
-                <div className="space-y-3">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm p-4">
+            <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+                <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-black">Add New Company</h2>
+                <div className="space-y-2 sm:space-y-3">
                     <Input label="Company Name" value={name} onChange={e => setName(e.target.value)} />
                     <Input label="CEO" value={ceo} onChange={e => setCeo(e.target.value)} />
                     <Input label="Revenue" type="number" value={revenue} onChange={e => setRevenue(e.target.value)} />
@@ -53,9 +53,9 @@ export const AddCompanyModal: React.FC<AddCompanyModalProps> = ({ open, onClose,
                     <Input label="Gross Margin" type="number" value={margin} onChange={e => setMargin(e.target.value)} />
                     <Input label="Key Insights (comma separated)" value={insights} onChange={e => setInsights(e.target.value)} />
                 </div>
-                <div className="flex justify-end gap-3 mt-6">
-                    <Button variant="ghost" onClick={onClose}>Cancel</Button>
-                    <Button variant="primary" onClick={handleConfirm}>Add Company</Button>
+                <div className="flex flex-col-reverse sm:flex-row justify-end gap-2 sm:gap-3 mt-4 sm:mt-6">
+                    <Button variant="ghost" onClick={onClose} fullWidth className="sm:w-auto">Cancel</Button>
+                    <Button variant="primary" onClick={handleConfirm} fullWidth className="sm:w-auto">Add Company</Button>
                 </div>
             </div>
         </div>

@@ -15,9 +15,9 @@ export const SearchInput: React.FC<SearchInputProps> = ({
     placeholder = 'Search...',
 }) => {
     return (
-        <div className="relative">
+        <div className="relative w-full sm:w-auto">
             <Search
-                size={18}
+                size={16}
                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
             />
             <input
@@ -25,7 +25,7 @@ export const SearchInput: React.FC<SearchInputProps> = ({
                 placeholder={placeholder}
                 value={value}
                 onChange={(e) => onChange(e.target.value)}
-                className="py-2 px-4 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64 text-gray-700"
+                className="py-2 px-3 sm:px-4 pl-9 sm:pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full sm:w-64 text-sm text-gray-700"
             />
         </div>
     );

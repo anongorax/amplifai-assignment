@@ -47,18 +47,18 @@ export default function LoginForm() {
 
     return (
 
-        <div className="flex items-center justify-center p-8 bg-white">
+        <div className="flex items-center justify-center p-4 sm:p-6 md:p-8 bg-white min-h-screen lg:min-h-0">
             <div className="w-full max-w-md">
                 {/* Logo or Brand */}
-                <div className="text-center mb-8 lg:text-left flex items-center">
+                <div className="text-center mb-6 sm:mb-8 lg:text-left flex items-center justify-center lg:justify-start">
                     {/* Assuming /flowstate.svg is the logo with text */}
-                    <Image src="/flowstate.svg" alt="FlowState Logo" width={48} height={48} />
-                    <h1 className="text-4xl font-bold text-blue-400 ml-2">FlowState</h1>
+                    <Image src="/flowstate.svg" alt="FlowState Logo" width={40} height={40} className="sm:w-12 sm:h-12" />
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-400 ml-2">FlowState</h1>
                 </div>
 
-                <div className='mb-4'>
-                    <h3 className='text-xl font-semibold text-black'>Login</h3>
-                    <p className='text-gray-600'>Enter your email below to login to your account.</p>
+                <div className='mb-4 sm:mb-6'>
+                    <h3 className='text-lg sm:text-xl font-semibold text-black'>Login</h3>
+                    <p className='text-sm sm:text-base text-gray-600'>Enter your email below to login to your account.</p>
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)}>

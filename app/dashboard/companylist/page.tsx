@@ -56,30 +56,32 @@ export default function CompanyListPage() {
                 onConfirm={handleAddCompany}
             />
             {/* Top Control Panel */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                 {/* Search and Filter */}
-                <div className="flex space-x-4">
-                    <SearchInput
-                        value={searchTerm}
-                        onChange={setSearchTerm}
-                        placeholder="Search companies..."
-                    />
-                    <button className="p-2 px-4 border border-blue-400 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
+                <div className="flex space-x-2 sm:space-x-4 flex-1 sm:flex-initial">
+                    <div className="flex-1 sm:flex-initial">
+                        <SearchInput
+                            value={searchTerm}
+                            onChange={setSearchTerm}
+                            placeholder="Search companies..."
+                        />
+                    </div>
+                    <button className="p-2 border border-blue-400 rounded-lg hover:bg-gray-50 transition-colors flex items-center gap-2">
                         <Filter size={18} className="text-blue-400" />
                     </button>
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex space-x-3">
-                    <button className="py-2 px-4 border border-blue-400 rounded-lg text-blue-400 hover:bg-blue-50 transition-colors flex items-center gap-2">
-                        <Download size={18} />
-                        <span>Export</span>
+                <div className="flex space-x-2 sm:space-x-3">
+                    <button className="flex-1 sm:flex-initial py-2 px-3 sm:px-4 border border-blue-400 rounded-lg text-blue-400 hover:bg-blue-50 transition-colors flex items-center justify-center gap-2 text-sm">
+                        <Download size={16} />
+                        <span className="hidden sm:inline">Export</span>
                     </button>
                     <button
-                        className="py-2 px-4 rounded-lg text-blue-400 border-blue-400 border transition-colors flex items-center gap-2"
+                        className="flex-1 sm:flex-initial py-2 px-3 sm:px-4 rounded-lg text-blue-400 border-blue-400 border transition-colors flex items-center justify-center gap-2 text-sm"
                         onClick={() => setModalOpen(true)}
                     >
-                        <Plus size={18} />
+                        <Plus size={16} />
                         <span>Add Company</span>
                     </button>
                 </div>
